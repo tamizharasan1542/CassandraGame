@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Game - Top 10 Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="instructions" id="instructions">
+        <h1>Match the Tech</h1>
+        <p>Drag each use case from the left to its matching company logo on the right.<br>
+           Correct matches earn 100 points and +5 seconds!<br>
+           Wrong matches lose 25 points.<br>
+           Match all 10 pairs before time runs out!</p>
+        <div class="instruction-content">
+            <!-- Changed to input field -->
+            <label for="employeeId">Enter Your Employee ID: </label>
+            <input type="text" id="employeeId" placeholder="e.g., EMP-001" required>
+            <button id="startGame" class="start-button">Start Game</button>
+        </div>
+    </div>
+
+    <div class="game-container hidden" id="game">
+        <div class="game-header">
+            <div class="score">Score: <span id="scoreValue">0</span></div>
+            <button id="musicToggle" class="music-button">🔇</button>
+            <div class="timer">Time: <span id="timeValue">120</span></div>
+        </div>
+        <div class="game-board" id="gameBoard">
+            <div class="company-circle" id="companyCircle"></div>
+        </div>
+    </div>
+
+    <div class="game-over hidden" id="gameOver">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button id="playAgain" class="play-again-button">Play Again</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
